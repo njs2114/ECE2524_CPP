@@ -18,7 +18,7 @@ parser.tab.hpp:
 scanner.o: scanner.cpp
 	g++ -Wall -g -c scanner.cpp
 
-scanner.cpp: scanner.ll scanner.hpp parser.tab.hpp
+scanner.cpp: scanner.ll scanner.hpp
 	flex -t scanner.ll > scanner.cpp
 
 scanner.hpp: parser.tab.hpp
